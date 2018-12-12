@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using System;
+using UnityEngine.UI;
 
 public class TutorialPopup : MonoBehaviour
 {
     [SerializeField] Animator[] tutorials;
     [SerializeField] Animator trafficLight;
     [SerializeField] UnityEvent startGameAction;
+    [SerializeField] Image raycastReceiver;
     private bool gameStarted = false;
 
     private int currentPage = -1;
@@ -43,6 +45,12 @@ public class TutorialPopup : MonoBehaviour
     {
         if(currentPage < 0) return;
         tutorials[currentPage].SetTrigger("Hide");
+
+        bool finalPage =  currentPage == tutorials.Length -1;
+        if (finalPage)
+        {
+            raycastReceiver.raycastTarget = false;
+        }
     }
 
     public void Advance() 
@@ -53,6 +61,7 @@ public class TutorialPopup : MonoBehaviour
     public void Show()
     {
         if(currentPage >= tutorials.Length ) return;
+        Debug.Log("SHOW");
         tutorials[currentPage].SetTrigger("Show");
     }
 }

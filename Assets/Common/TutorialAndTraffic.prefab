@@ -30,13 +30,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4768592153575626014}
+  m_Father: {fileID: 47058332703113135}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 799.99994, y: 399.99997}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4768592153034281862
 CanvasRenderer:
@@ -114,7 +114,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4768592153575626014}
+  - component: {fileID: 47058332703113135}
   - component: {fileID: 4638589995596855748}
   m_Layer: 0
   m_Name: TutorialAndTraffic
@@ -123,8 +123,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4768592153575626014
-Transform:
+--- !u!224 &47058332703113135
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -139,6 +139,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4638589995596855748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,12 +163,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  raycastReceiver: {fileID: 4768592153034281863}
 --- !u!1001 &699586291962947172
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4768592153575626014}
+    m_TransformParent: {fileID: 47058332703113135}
     m_Modifications:
     - target: {fileID: 5447138154323707290, guid: fa116255bbdc54ec8aab3d40bdcff6ab,
         type: 3}
@@ -233,7 +239,7 @@ PrefabInstance:
     - target: {fileID: 5447138154323707301, guid: fa116255bbdc54ec8aab3d40bdcff6ab,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 133.99995
+      value: -66
       objectReference: {fileID: 0}
     - target: {fileID: 5447138154323707301, guid: fa116255bbdc54ec8aab3d40bdcff6ab,
         type: 3}
