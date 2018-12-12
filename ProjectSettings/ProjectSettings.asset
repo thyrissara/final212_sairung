@@ -674,7 +674,7 @@ PlayerSettings:
   facebookStatus: 1
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 6
   cloudProjectId: d8d17dad-2bed-4249-8ef3-172b146f41aa
   framebufferDepthMemorylessMode: 0
   projectName: final212
