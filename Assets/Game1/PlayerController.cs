@@ -6,9 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float smoothTime;
+    [SerializeField] private bool receiveKeyboardEvent;
 
     private Vector3 targetPosition;
     private Vector3 currentVelocity;
+
 
     public void Awake()
     {
@@ -17,13 +19,23 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.Q))
         {
-            RunBackward();
+            Vector3 resetPosition = transform.position;
+            resetPosition.x = 0;
+            transform.position = resetPosition;
+            targetPosition = resetPosition;
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (receiveKeyboardEvent)
         {
-            RunForward();
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                RunBackward();
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                RunForward();
+            }
         }
         UpdateToRealPosition();
     }
