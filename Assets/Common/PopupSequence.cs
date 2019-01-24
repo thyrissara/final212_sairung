@@ -6,36 +6,45 @@ using UnityEngine.Events;
 using System;
 using UnityEngine.UI;
 
-public class TutorialPopup : MonoBehaviour
+public class PopupSequence : MonoBehaviour
 {
     [SerializeField] Animator[] tutorials;
     [SerializeField] Animator trafficLight;
     [SerializeField] UnityEvent startGameAction;
     [SerializeField] Image raycastReceiver;
+
+    public bool showTrafficAfterLastPage = false;
     private bool gameStarted = false;
 
     private int currentPage = -1;
+    private bool sequenceStarted = false;
 
-    public void Awake()
+    public void StartSequence()
     {
+        sequenceStarted = true;
         Touch();
     }
 
     public void Update()
     {
-        if(trafficLight.GetBool("Finished") == true && !gameStarted)
+        if (trafficLight != null)
         {
-            startGameAction.Invoke();
-            gameStarted = true;
+            if (trafficLight.GetBool("Finished") == true && !gameStarted)
+            {
+                startGameAction.Invoke();
+                gameStarted = true;
+            }
         }
     }
 
     public void Touch()
     {
+        if(!sequenceStarted) return;
+
         Hide();
         Advance();
         Show();
-        if(currentPage >= tutorials.Length)
+        if(currentPage >= tutorials.Length && showTrafficAfterLastPage)
         {
             trafficLight.SetTrigger("Show");
         }
@@ -50,6 +59,10 @@ public class TutorialPopup : MonoBehaviour
         if (finalPage)
         {
             raycastReceiver.raycastTarget = false;
+            if(showTrafficAfterLastPage == false)
+            {
+                startGameAction.Invoke();
+            }
         }
     }
 
@@ -61,7 +74,7 @@ public class TutorialPopup : MonoBehaviour
     public void Show()
     {
         if(currentPage >= tutorials.Length ) return;
-        Debug.Log("SHOW");
+        //Debug.Log("SHOW");
         tutorials[currentPage].SetTrigger("Show");
     }
 }

@@ -1,9 +1,9 @@
-﻿<Properties StartupConfiguration="{BECF3390-9A5F-31C1-89E3-17F68EEAAE42}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TutorialPopup.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Common/TutorialPopup.cs">
     <Files>
-      <File FileName="Assets/PlayerController.cs" Line="25" Column="28" />
-      <File FileName="Assets/BearContoller.cs" Line="18" Column="29" />
-      <File FileName="Assets/TutorialPopup.cs" Line="1" Column="1" />
+      <File FileName="Assets/Game1/PlayerController.cs" Line="25" Column="28" />
+      <File FileName="Assets/Game1/BearContoller.cs" Line="1" Column="1" />
+      <File FileName="Assets/Common/TutorialPopup.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
