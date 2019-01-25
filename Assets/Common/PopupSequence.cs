@@ -21,6 +21,7 @@ public class PopupSequence : MonoBehaviour
 
     public void StartSequence()
     {
+        raycastReceiver.raycastTarget = true;
         sequenceStarted = true;
         Touch();
     }
