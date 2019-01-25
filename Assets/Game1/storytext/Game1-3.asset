@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8545c2184aec54d6da41c18c11b807d6, type: 3}
+  m_Name: Game1-3
+  m_EditorClassIdentifier: 
+  who: "\u0E2B\u0E21\u0E35"
+  text: vasdas
+  backgroundImage: {fileID: 21300000, guid: 9c711b6eb5c364a088eac3d7e1387b55, type: 3}
