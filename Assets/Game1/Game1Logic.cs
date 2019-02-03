@@ -11,6 +11,15 @@ public class Game1Logic : MonoBehaviour
 
     [Space]
 
+    public float speedUpDownTriggerDistance = 15;
+    public BearContoller bearController;
+    public Transform playerLocation;
+    public Transform bearLocation;
+
+    [Space]
+    public Animator alertAnimator;
+    [Space]
+
     public Transform butterfly1;
     public Transform butterfly2;
 
@@ -35,6 +44,41 @@ public class Game1Logic : MonoBehaviour
     {
         CheckForGoal();
         CheckForButterfly();
+        CheckForSpeedBoost();
+    }
+
+    private void CheckForSpeedBoost()
+    {
+        float distance = playerLocation.position.x - bearLocation.position.x;
+
+        switch (bearController.speedStatus)
+        {
+            case SpeedStatus.Normal:
+                if (distance > speedUpDownTriggerDistance)
+                {
+                    bearController.SpeedUp();
+                    alertAnimator.SetTrigger("SpeedUp");
+                }
+                else if (distance < -speedUpDownTriggerDistance)
+                {
+                    bearController.SpeedDown();
+                    alertAnimator.SetTrigger("SpeedDown");
+                }
+                break;
+            case SpeedStatus.SpeedUp:
+                if (distance <= 0)
+                {
+                    bearController.NormalSpeed();
+                }
+                break;
+            case SpeedStatus.SpeedDown:
+                if (distance >= 0)
+                {
+                    bearController.NormalSpeed();
+                }
+                break;
+        }
+
     }
 
     private void CheckForGoal()
@@ -57,7 +101,7 @@ public class Game1Logic : MonoBehaviour
     public void AfterWinSequence()
     {
         Debug.Log("After Win");
-        SceneManager.LoadScene("Story");
+        SceneManager.LoadScene("Game2");
     }
 
     public void AfterLoseSequence()

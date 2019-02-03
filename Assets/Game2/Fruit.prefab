@@ -88,14 +88,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8393b34622479459cb6de3ee7f6fdfd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallDownSpeed: 0.8
+  fallDownSpeed: 3.5
   touchEvent:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   noDestroy: 0
-  isRock: 0
+  fruitType: 0
+  rectTransform: {fileID: 927852651133708293}
+  countNumber: {fileID: 1258613865691186235, guid: 48de9600966864c1699410af8c49332f,
+    type: 3}
+  mainCanvas: {fileID: 0}
 --- !u!114 &926119801997893518
 MonoBehaviour:
   m_ObjectHideFlags: 0

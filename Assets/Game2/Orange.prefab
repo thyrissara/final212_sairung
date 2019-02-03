@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orange
       objectReference: {fileID: 0}
+    - target: {fileID: 6658341126011458872, guid: 5e864109f204e4c5d9ad327737d84892,
+        type: 3}
+      propertyPath: fruitType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 927852651133708293, guid: 5e864109f204e4c5d9ad327737d84892,
         type: 3}
       propertyPath: m_LocalPosition.x

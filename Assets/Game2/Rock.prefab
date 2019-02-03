@@ -12,6 +12,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock
       objectReference: {fileID: 0}
+    - target: {fileID: 6658341126011458872, guid: 5e864109f204e4c5d9ad327737d84892,
+        type: 3}
+      propertyPath: isRock
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658341126011458872, guid: 5e864109f204e4c5d9ad327737d84892,
+        type: 3}
+      propertyPath: fruitType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 927852651133708293, guid: 5e864109f204e4c5d9ad327737d84892,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -126,11 +136,6 @@ PrefabInstance:
     - target: {fileID: 927852651133708292, guid: 5e864109f204e4c5d9ad327737d84892,
         type: 3}
       propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6658341126011458872, guid: 5e864109f204e4c5d9ad327737d84892,
-        type: 3}
-      propertyPath: isRock
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 926119801997893518, guid: 5e864109f204e4c5d9ad327737d84892,

@@ -36,14 +36,15 @@ public class Game2Logic : MonoBehaviour
         StartRound();
     }
 
+    private int roundCount;
     private int orangeTargetCount;
     private int bananaTargetCount;
 
     private int totalCount;
     private int disappearCount = 0;
 
-    private int collectedOrange = 0;
-    private int collectedBanana = 0;
+    public int collectedOrange = 0;
+    public int collectedBanana = 0;
 
     public void Start()
     {
@@ -65,8 +66,13 @@ public class Game2Logic : MonoBehaviour
 
     IEnumerator StartRoundRoutine()
     {
-        orangeTargetCount = Random.Range(1, 4);
-        bananaTargetCount = Random.Range(1, 4);
+        roundCount++;
+
+        bool bananaRound = roundCount % 2 == 0;
+
+        orangeTargetCount = bananaRound ? 0 : Random.Range(1, 4);
+        bananaTargetCount = bananaRound ? Random.Range(1, 4) : 0;
+
         int rockCount = Random.Range(0, 3);
 
         totalCount = orangeTargetCount + bananaTargetCount + rockCount;
@@ -74,13 +80,26 @@ public class Game2Logic : MonoBehaviour
 
         ChangeSpeechBubble(orangeTargetCount, bananaTargetCount);
 
-        bubbleAnimator1.SetTrigger("Show");
-        bubbleAnimator2.SetTrigger("Show");
+        if (bananaRound)
+        {
+            bubbleAnimator2.SetTrigger("Show");
+        }
+        else
+        {
+            bubbleAnimator1.SetTrigger("Show");
+        }
 
         yield return new WaitForSeconds(2);
 
-        bubbleAnimator1.SetTrigger("Hide");
-        bubbleAnimator2.SetTrigger("Hide");
+        if (bananaRound)
+        {
+            bubbleAnimator2.SetTrigger("Hide");
+        }
+        else
+        {
+            bubbleAnimator1.SetTrigger("Hide");
+        }
+
         SpawnFruits(orangeTargetCount, bananaTargetCount, rockCount);
     }
 
@@ -221,9 +240,27 @@ public class Game2Logic : MonoBehaviour
         bananaTargetText.text = bananaCount.ToString();
     }
 
+    public AudioClip[] numberSounds;
+    public AudioSource numberSoundSource;
+    private void PlayNumberSound(int number)
+    {
+        if(number >= numberSounds.Length)
+        {
+            return;
+        }
+        else if(number <= 0)
+        {
+            return;
+        }
+
+        numberSoundSource.clip = numberSounds[number];
+        numberSoundSource.Play();
+    }
+
     public void GetBanana()
     {
         collectedBanana++;
+        PlayNumberSound(collectedBanana);
         disappearCount++;
         UpdateScore();
         if(CheckWin() == false)
@@ -235,6 +272,7 @@ public class Game2Logic : MonoBehaviour
     public void GetOrange()
     {
         collectedOrange++;
+        PlayNumberSound(collectedOrange);
         disappearCount++;
         UpdateScore();
         if(CheckWin() == false)
@@ -247,7 +285,7 @@ public class Game2Logic : MonoBehaviour
 
     private bool CheckWin()
     {
-        if(collectedBanana >= 4 && collectedOrange >= 4)
+        if(collectedBanana >= 10 && collectedOrange >= 10)
         {
             isWinningOrLosing = true;
             winLoseSequence.StartSequence(SequenceType.Win);
@@ -288,5 +326,4 @@ public class Game2Logic : MonoBehaviour
             StartRound();
         }
     }
-
 }
