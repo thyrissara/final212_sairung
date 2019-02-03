@@ -120,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 4585732055519367935, guid: bbe7ae4a9cd194947911f24948a3664f,
         type: 3}
       propertyPath: storySequence.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4585732055519367935, guid: bbe7ae4a9cd194947911f24948a3664f,
         type: 3}
@@ -150,6 +150,37 @@ PrefabInstance:
         type: 3}
       propertyPath: goToSceneAfterTheEnd
       value: Game1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4585732055519367935, guid: bbe7ae4a9cd194947911f24948a3664f,
+        type: 3}
+      propertyPath: storySequence.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 926af1ddfdf5645e2bc0fe34cf38e219,
+        type: 2}
+    - target: {fileID: 3826544764564808622, guid: bbe7ae4a9cd194947911f24948a3664f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785992490671774790, guid: bbe7ae4a9cd194947911f24948a3664f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032484180954013039, guid: bbe7ae4a9cd194947911f24948a3664f,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032484180954013039, guid: bbe7ae4a9cd194947911f24948a3664f,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 892287808854060600, guid: bbe7ae4a9cd194947911f24948a3664f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -11.200073
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbe7ae4a9cd194947911f24948a3664f, type: 3}

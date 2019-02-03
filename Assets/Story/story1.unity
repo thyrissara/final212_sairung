@@ -229,6 +229,51 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5705682107720166666, guid: 097b250a844d54c5997c3342806bfc7f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481442330003287075, guid: 097b250a844d54c5997c3342806bfc7f,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481442330003287075, guid: 097b250a844d54c5997c3342806bfc7f,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342408656974749556, guid: 097b250a844d54c5997c3342806bfc7f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -11.200012
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342408656974749556, guid: 097b250a844d54c5997c3342806bfc7f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13.800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202620816481292803, guid: 097b250a844d54c5997c3342806bfc7f,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202620816481292803, guid: 097b250a844d54c5997c3342806bfc7f,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202620816481292803, guid: 097b250a844d54c5997c3342806bfc7f,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202620816481292803, guid: 097b250a844d54c5997c3342806bfc7f,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 097b250a844d54c5997c3342806bfc7f, type: 3}
 --- !u!1 &1961694837

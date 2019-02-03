@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8545c2184aec54d6da41c18c11b807d6, type: 3}
-  m_Name: Game1-4
+  m_Name: Game1-5
   m_EditorClassIdentifier: 
-  who: 3rer
-  text: "\u0E2A\u0E27\u0E31\u0E2A\u0E14\u0E35"
-  backgroundImage: {fileID: 21300000, guid: 9c711b6eb5c364a088eac3d7e1387b55, type: 3}
+  who: 
+  text: "\u0E40\u0E08\u0E49\u0E32\u0E2B\u0E0D\u0E34\u0E07\u0E2A\u0E32\u0E22\u0E23\u0E38\u0E49\u0E07\u0E15\u0E2D\u0E1A\u0E15\u0E01\u0E25\u0E07"
+  backgroundImage: {fileID: 21300000, guid: 0eef8e4aa0c054b2b84eb176f638679a, type: 3}
