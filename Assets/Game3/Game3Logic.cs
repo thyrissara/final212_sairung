@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-    public enum Game3State
+public enum Game3State
     {
+        NormalState,
         SawState,
         WateringState,
     }
@@ -29,6 +31,15 @@ public class Game3Logic : MonoBehaviour
 
     [Space]
 
+    public FloatToColor leftBranchFtc;
+    public FloatToColor rightBranchFtc;
+    public Animation leftBranchSawAnimation;
+    public Animation rightBranchSawAnimation;
+    public bool leftBranchSawed;
+    public bool rightBranchSawed;
+
+    [Space]
+
     public RectTransform leaf1;
     public FloatToColor leaf1Ftc;
     public RectTransform leaf2;
@@ -42,17 +53,49 @@ public class Game3Logic : MonoBehaviour
     public TouchFollower[] rememberFollowerPerFinger;
 
     public float wateringSpeed = 0.01f;
+    public float sawSpeed = 0.01f;
+
+    public PopupSequence tutorial;
+    public WinLoseSequence ending;
 
     public void Start()
     {
         rememberFollowerPerFinger = new TouchFollower[2];
-        foreach(var saw in sawFollowers)
+        ForceHideAll();
+        tutorial.StartSequence();
+    }
+
+    public void Update()
+    {
+        if(currentState == Game3State.SawState)
         {
-            saw.Hide();
+            if(leftBranchFtc.floatValue > 1 && leftBranchSawed == false)
+            {
+                leftBranchSawAnimation.Play();
+                leftBranchSawed = true;
+            }
+
+            if(rightBranchFtc.floatValue > 1 && rightBranchSawed == false)
+            {
+                rightBranchSawAnimation.Play();
+                rightBranchSawed = true;
+            }
+
+            if(rightBranchFtc.floatValue > 1 && leftBranchFtc.floatValue > 1)
+            {
+                waterButton.gameObject.SetActive(true);
+                currentState = Game3State.NormalState;
+                ForceHideAll();
+            }
         }
-        foreach(var water in waterFollowers)
+        else if(currentState == Game3State.WateringState)
         {
-            water.Hide();
+            if(leaf1Ftc.floatValue > 1 && leaf2Ftc.floatValue > 1)
+            {
+                currentState = Game3State.NormalState;
+                ForceHideAll();
+                ending.StartSequence(SequenceType.Win);
+            }
         }
     }
 
@@ -112,6 +155,18 @@ public class Game3Logic : MonoBehaviour
         }
     }
 
+    private void ForceHideAll()
+    {
+        foreach(var saw in sawFollowers)
+        {
+            saw.Hide();
+        }
+        foreach(var water in waterFollowers)
+        {
+            water.Hide();
+        }
+    }
+
     private void UpdateFollowerToPed(TouchFollower tf, PointerEventData pointerEventData)
     {
         bool succeed = RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectangle, pointerEventData.position, mainCamera, out Vector2 outLocalPoint);
@@ -120,20 +175,47 @@ public class Game3Logic : MonoBehaviour
         //Debug.Log($"{pointerEventData.position} {outLocalPoint}");
     }
 
+    public Button sawButton;
+    public void SawButtonPress()
+    {
+        sawButton.enabled = false;
+        currentState = Game3State.SawState;
+    }
+
+    public Button waterButton;
+    public void WaterButtonPress()
+    {
+        waterButton.enabled = false;
+        currentState = Game3State.WateringState;
+    }
+
+    public void TutorialFinished()
+    {
+        sawButton.gameObject.SetActive(true);
+    }
+
     public void Drag(BaseEventData baseEventData)
     {
+        if(currentState == Game3State.NormalState)
+        {
+            return;
+        }
+
         PointerEventData ped = (PointerEventData)baseEventData; //Check if at saw phase or not
         // Debug.Log( string.Join( " - " , ped.hovered.Select(x => x.name)) );
         // Debug.Log("PED Point " + ped.position);
+
         if (currentState == Game3State.SawState)
         {
             if (CheckPedInRect(leftBranchRect, ped))
             {
                 rememberFollowerPerFinger[ped.pointerId].PlayParticle();
+                leftBranchFtc.IncreaseFloat(sawSpeed);
             }
             else if (CheckPedInRect(rightBranchRect, ped))
             {
                 rememberFollowerPerFinger[ped.pointerId].PlayParticle();
+                rightBranchFtc.IncreaseFloat(sawSpeed);
             }
             else if (CheckPedInRect(birdBranchRect, ped))
             {
@@ -153,12 +235,12 @@ public class Game3Logic : MonoBehaviour
             if (CheckPedInRect(leaf1, ped))
             {
                 rememberFollowerPerFinger[ped.pointerId].PlayParticle();
-                leaf1Ftc.floatValue += wateringSpeed;
+                leaf1Ftc.IncreaseFloat(wateringSpeed);
             }
             else if (CheckPedInRect(leaf2, ped))
             {
                 rememberFollowerPerFinger[ped.pointerId].PlayParticle();
-                leaf2Ftc.floatValue += wateringSpeed;
+                leaf2Ftc.IncreaseFloat(wateringSpeed);
             }
             else
             {

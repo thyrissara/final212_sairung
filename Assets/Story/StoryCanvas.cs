@@ -18,6 +18,8 @@ public class StoryCanvas : MonoBehaviour
     public Image bgImage;
     public CanvasGroup whoCanvasGroup;
 
+    public AudioSource changePageSource;
+
     public GraphicRaycaster graphicRaycaster;
 
     private int currentPage = 0;
@@ -35,6 +37,7 @@ public class StoryCanvas : MonoBehaviour
 
     public void AdvanceStory()
     {
+        changePageSource.Play();
         currentPage++;
         if(currentPage >= storySequence.Length)
         {

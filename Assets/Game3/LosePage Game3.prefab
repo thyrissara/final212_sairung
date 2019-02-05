@@ -10,8 +10,14 @@ PrefabInstance:
     - target: {fileID: 2985963897043792890, guid: e85565b90e1d943bba6f16f64d59a0bf,
         type: 3}
       propertyPath: m_Name
-      value: EndingPage
+      value: LosePage Game3
       objectReference: {fileID: 0}
+    - target: {fileID: 2985963897043792888, guid: e85565b90e1d943bba6f16f64d59a0bf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ae746e1a4ba274aae9babb86449cb135,
+        type: 3}
     - target: {fileID: 2985963897043792891, guid: e85565b90e1d943bba6f16f64d59a0bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -117,11 +123,5 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2985963897043792888, guid: e85565b90e1d943bba6f16f64d59a0bf,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 113c8cec23f1743e68016e0ab68f7e88,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85565b90e1d943bba6f16f64d59a0bf, type: 3}

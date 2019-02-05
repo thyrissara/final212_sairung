@@ -5,9 +5,16 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using System;
 using UnityEngine.UI;
+using System.Linq;
 
 public class PopupSequence : MonoBehaviour
 {
+    [ContextMenu("Add all animators")]
+    public void AddAllAnimators()
+    {
+        tutorials = this.gameObject.GetComponentsInChildren<Animator>().Where( x => x.name != "Traffic").ToArray();
+    }
+
     [SerializeField] Animator[] tutorials;
     [SerializeField] Animator trafficLight;
     [SerializeField] UnityEvent startGameAction;

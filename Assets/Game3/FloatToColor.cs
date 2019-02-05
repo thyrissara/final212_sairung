@@ -7,8 +7,12 @@ using UnityEngine.UI;
 public class FloatToColor : MonoBehaviour
 {
     public Image image;
+
     [Range(0f,1f)]
     public float floatValue;
+
+    public void IncreaseFloat(float increaseBy) => floatValue += increaseBy;
+
     public Gradient gradient;
 
     public void Update()

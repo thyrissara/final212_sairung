@@ -161,25 +161,25 @@ PrefabInstance:
         type: 3}
       propertyPath: storySequence.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 926af1ddfdf5645e2bc0fe34cf38e219,
+      objectReference: {fileID: 11400000, guid: e9dcd0a7605ca40eea13023ee4420d25,
         type: 2}
     - target: {fileID: 4585732055519367935, guid: bbe7ae4a9cd194947911f24948a3664f,
         type: 3}
       propertyPath: storySequence.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 926af1ddfdf5645e2bc0fe34cf38e219,
+      objectReference: {fileID: 11400000, guid: 239398b274e914c839a1bdb6129d6023,
         type: 2}
     - target: {fileID: 4585732055519367935, guid: bbe7ae4a9cd194947911f24948a3664f,
         type: 3}
       propertyPath: storySequence.Array.data[7]
       value: 
-      objectReference: {fileID: 11400000, guid: 926af1ddfdf5645e2bc0fe34cf38e219,
+      objectReference: {fileID: 11400000, guid: 454ea4262ea9245acad7cd14a0c8ee35,
         type: 2}
     - target: {fileID: 4585732055519367935, guid: bbe7ae4a9cd194947911f24948a3664f,
         type: 3}
       propertyPath: storySequence.Array.data[8]
       value: 
-      objectReference: {fileID: 11400000, guid: 926af1ddfdf5645e2bc0fe34cf38e219,
+      objectReference: {fileID: 11400000, guid: 8f1c8bf9fbafd40b4ba2e14958380bad,
         type: 2}
     - target: {fileID: 4585732055519367935, guid: bbe7ae4a9cd194947911f24948a3664f,
         type: 3}
