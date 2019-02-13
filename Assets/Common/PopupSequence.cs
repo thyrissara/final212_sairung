@@ -22,8 +22,9 @@ public class PopupSequence : MonoBehaviour
 
     public bool showTrafficAfterLastPage = false;
     private bool gameStarted = false;
+    private bool lightShowing = false;
 
-    private int currentPage = -1;
+    private int currentPage = 0;
     private bool sequenceStarted = false;
 
     public void StartSequence()
@@ -41,6 +42,7 @@ public class PopupSequence : MonoBehaviour
             {
                 startGameAction.Invoke();
                 gameStarted = true;
+                raycastReceiver.raycastTarget = false;
             }
         }
     }
@@ -48,6 +50,7 @@ public class PopupSequence : MonoBehaviour
     public void Touch()
     {
         if(!sequenceStarted) return;
+        if(lightShowing) return;
 
         Hide();
         Advance();
@@ -55,15 +58,16 @@ public class PopupSequence : MonoBehaviour
         if(currentPage >= tutorials.Length && showTrafficAfterLastPage)
         {
             trafficLight.SetTrigger("Show");
+            lightShowing = true;
         }
     }
 
     public void Hide()
     {
-        if(currentPage < 0) return;
+        if(currentPage < 0 || currentPage >= tutorials.Length ) return;
         tutorials[currentPage].SetTrigger("Hide");
 
-        bool finalPage =  currentPage == tutorials.Length -1;
+        bool finalPage =  currentPage >= tutorials.Length -1;
         if (finalPage)
         {
             raycastReceiver.raycastTarget = false;
@@ -76,12 +80,13 @@ public class PopupSequence : MonoBehaviour
 
     public void Advance() 
     {
+        if (currentPage < tutorials.Length ) return;
         currentPage++;
     }
 
     public void Show()
     {
-        if(currentPage >= tutorials.Length ) return;
+        if(currentPage < 0 || currentPage >= tutorials.Length ) return;
         //Debug.Log("SHOW");
         tutorials[currentPage].SetTrigger("Show");
     }
