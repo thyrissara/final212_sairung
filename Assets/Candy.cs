@@ -1,3 +1,5 @@
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -15,13 +17,20 @@ public class Candy : MonoBehaviour
     public Camera mainCamera;
     public CandyType candyType;
 
-    public CandyState State { get; private set; }
+    [Space]
+
+    public Cloud[] clouds;
+    public TextMeshProUGUI numberText;
+
+    [Space]
 
     public float smoothTime = 1;
     public float outOfScreenOffsetY = 100;
 
     private Vector3 startingPosition;
     private Vector3 currentVelocity;
+
+    public CandyState State { get; private set; }
 
     public void Start()
     {
@@ -40,6 +49,8 @@ public class Candy : MonoBehaviour
         {
             this.transform.position = startingPosition - new Vector3(0, outOfScreenOffsetY, 0);
         }
+
+        numberText.text = clouds.Sum(x => x.candyGot).ToString();
     }
 
     public void InactiveState() => this.State = CandyState.Inactive;
