@@ -3,24 +3,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public enum CandyState
-{
-    NotDragging,
-    Dragging,
-    Inactive,
-}
-
-public class Candy : MonoBehaviour
+public class Log2 : MonoBehaviour
 {
     public RectTransform canvasRectangle;
     public RectTransform selfRectTransform;
     public Camera mainCamera;
-    public CandyType candyType;
-
-    [Space]
-
-    public Cloud[] clouds;
-    public TextMeshProUGUI numberText;
 
     [Space]
 
@@ -29,6 +16,9 @@ public class Candy : MonoBehaviour
 
     private Vector3 startingPosition;
     private Vector3 currentVelocity;
+
+    public int logId;
+    public Log2[] allLogs;
 
     public CandyState State { get; private set; }
 
@@ -50,10 +40,6 @@ public class Candy : MonoBehaviour
             this.transform.position = startingPosition - new Vector3(0, outOfScreenOffsetY, 0);
         }
 
-        if (numberText != null)
-        {
-            numberText.text = clouds.Sum(x => x.candyGot).ToString();
-        }
     }
 
     public void InactiveState() => this.State = CandyState.Inactive;
@@ -86,6 +72,34 @@ public class Candy : MonoBehaviour
 
     private void UpdateToPointerEventData(PointerEventData pointerEventData)
     {
+        switch (logId)
+        {
+            case 0:
+                break;
+            case 1:
+            case 2:
+                if (allLogs[0].State == CandyState.Inactive)
+                {
+                    break;
+                }
+                else
+                {
+                    return;
+                }
+            case 3:
+            case 4:
+                if (allLogs[0].State == CandyState.Inactive &&
+                allLogs[1].State == CandyState.Inactive &&
+                allLogs[2].State == CandyState.Inactive)
+                {
+                    break;
+                }
+                else
+                {
+                    return;
+                }
+        }
+
         bool succeed = RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectangle, pointerEventData.position, Camera.main, out Vector2 outLocalPoint);
         outLocalPoint = outLocalPoint + new Vector2(canvasRectangle.rect.width / 2f, canvasRectangle.rect.height / 2f);
         selfRectTransform.anchoredPosition = outLocalPoint;
