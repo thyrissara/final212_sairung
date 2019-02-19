@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -28,7 +29,7 @@ public class PaintLogic : MonoBehaviour
 
     public void Start()
     {
-        if( Random.value < 0.5f)
+        if (UnityEngine.Random.value < 0.5f)
         {
             image1.SetActive(true);
             image2.SetActive(false);
@@ -54,8 +55,19 @@ public class PaintLogic : MonoBehaviour
         byte[] pngBytes = t2d.EncodeToPNG();
 
         Debug.Log("SAVING " + Application.persistentDataPath);
-        File.WriteAllBytes(Application.persistentDataPath + "/test.png", pngBytes);
+        Directory.CreateDirectory(Application.persistentDataPath + "/gallery");
+        string randomName = Guid.NewGuid().ToString();
 
+        if(image1.activeSelf == true)
+        {
+            randomName = "1-" + randomName;
+        }
+        else
+        {
+            randomName = "2-" + randomName;
+        }
+
+        File.WriteAllBytes(Application.persistentDataPath + $"/gallery/{randomName}.png", pngBytes);
     }
 
     public void BrushTouched()
