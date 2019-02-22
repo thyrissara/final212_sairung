@@ -247,7 +247,7 @@ PrefabInstance:
     - target: {fileID: 7342408656974749556, guid: 097b250a844d54c5997c3342806bfc7f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -11.200012
+      value: -11.199951
       objectReference: {fileID: 0}
     - target: {fileID: 7342408656974749556, guid: 097b250a844d54c5997c3342806bfc7f,
         type: 3}
@@ -273,6 +273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.lineCount
       value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207290486521684915, guid: 097b250a844d54c5997c3342806bfc7f,
+        type: 3}
+      propertyPath: goToSceneAfterTheEnd
+      value: Game1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 097b250a844d54c5997c3342806bfc7f, type: 3}

@@ -31,6 +31,7 @@ public class PopupSequence : MonoBehaviour
     {
         raycastReceiver.raycastTarget = true;
         sequenceStarted = true;
+        currentPage = -1;
         Touch();
     }
 
@@ -65,6 +66,7 @@ public class PopupSequence : MonoBehaviour
     public void Hide()
     {
         if(currentPage < 0 || currentPage >= tutorials.Length ) return;
+        //Debug.Log("HIDE");
         tutorials[currentPage].SetTrigger("Hide");
 
         bool finalPage =  currentPage >= tutorials.Length -1;
@@ -80,14 +82,15 @@ public class PopupSequence : MonoBehaviour
 
     public void Advance() 
     {
-        if (currentPage < tutorials.Length ) return;
+        if ( currentPage >= tutorials.Length ) return;
+        //Debug.Log("ADVANCE");
         currentPage++;
     }
 
     public void Show()
     {
         if(currentPage < 0 || currentPage >= tutorials.Length ) return;
-        //Debug.Log("SHOW");
+       // Debug.Log("SHOW");
         tutorials[currentPage].SetTrigger("Show");
     }
 }

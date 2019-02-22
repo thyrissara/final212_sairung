@@ -3,14 +3,15 @@ using UnityEngine;
 public class Fix : MonoBehaviour
 {
     public RectTransform selfRect;
-    public Animation fixAnimation;
     public bool alreadyFixed;
+    public Animator FixLog;
+
 
     public void FixIt()
     {
         if (!alreadyFixed)
         {
-            fixAnimation.Play();
+            FixLog.SetTrigger("Logfix");
             alreadyFixed = true;
         }
     }

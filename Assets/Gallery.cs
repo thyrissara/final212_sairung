@@ -26,6 +26,7 @@ public class Gallery : MonoBehaviour
     [Space]
 
     public Image galleryImage;
+    public Image galleryImageBig;
     public GameObject text1;
     public GameObject text2;
     public GameObject viewObject;
@@ -165,6 +166,7 @@ public class Gallery : MonoBehaviour
     {
         rememberViewing = index;
         galleryImage.sprite = all[index].sprite;
+        galleryImageBig.sprite = all[index].sprite;
         gameObject.SetActive(false);
         viewObject.SetActive(true);
         string filePath = all[index].path;

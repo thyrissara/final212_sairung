@@ -122,7 +122,7 @@ PrefabInstance:
     - target: {fileID: 6207290486521684916, guid: 097b250a844d54c5997c3342806bfc7f,
         type: 3}
       propertyPath: m_Name
-      value: StoryCanvas Game1
+      value: StoryCanvas Game4
       objectReference: {fileID: 0}
     - target: {fileID: 6207290486521684912, guid: 097b250a844d54c5997c3342806bfc7f,
         type: 3}
@@ -276,8 +276,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6207290486521684915, guid: 097b250a844d54c5997c3342806bfc7f,
         type: 3}
+      propertyPath: storySequence.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207290486521684915, guid: 097b250a844d54c5997c3342806bfc7f,
+        type: 3}
       propertyPath: goToSceneAfterTheEnd
-      value: Game4_2
+      value: Game4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 097b250a844d54c5997c3342806bfc7f, type: 3}

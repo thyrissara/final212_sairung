@@ -5,6 +5,7 @@ using Facebook.Unity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HomeLogic : MonoBehaviour
@@ -15,11 +16,20 @@ public class HomeLogic : MonoBehaviour
         FB.Init();
     }
 
+    public UnityEvent loggingIn;
     public UnityEvent afterLoginSuccess;
     public UnityEvent afterLogout;
 
+    public void Start() 
+    {
+        if (FB.IsLoggedIn){
+            afterLoginSuccess.Invoke();
+        }
+    }
+
     public void Login()
     {
+        loggingIn.Invoke();
         string[] permissions = { "public_profile","email" };
         FB.LogInWithReadPermissions(permissions, result =>
         {
@@ -78,5 +88,9 @@ public class HomeLogic : MonoBehaviour
     {
         FB.LogOut();
         afterLogout.Invoke();
+    }
+
+    public void nextscene (){
+        SceneManager.LoadScene("story1");
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public enum Game5State
 {
@@ -13,6 +14,25 @@ public enum Game5State
 
 public class Game5Logic : MonoBehaviour
 {
+
+    public WinLoseSequence win;
+    private bool won;
+   
+
+    public PopupSequence tutorialPopup;
+    //public WinLoseSequence endingPopup;
+
+    public void Awake()
+    {
+        tutorialPopup.StartSequence();
+    }
+
+     public void AfterWinSequence()
+    {
+        Debug.Log("After Win");
+        SceneManager.LoadScene("story6");
+    }
+    
     public Candy[] candies;
 
     [Space]
@@ -58,9 +78,10 @@ public class Game5Logic : MonoBehaviour
 
         void DroppingLogic()
         {
-            if (clouds.All(x => x.CloudState == CloudState.Success))
+            if (clouds.All(x => x.CloudState == CloudState.Success) && won == false)
             {
                 winLoseSequence.StartSequence(SequenceType.Win);
+                won = true;
             }
         }
 

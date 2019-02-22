@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4304954545363079224}
   - component: {fileID: 1529422584028192614}
   - component: {fileID: 8574070723787448559}
-  - component: {fileID: 1413215768415772394}
+  - component: {fileID: 4735465550816883431}
   m_Layer: 5
   m_Name: fix
   m_TagString: Untagged
@@ -89,20 +89,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRect: {fileID: 8938344015202350536}
-  fixAnimation: {fileID: 1413215768415772394}
   alreadyFixed: 0
---- !u!111 &1413215768415772394
-Animation:
+  FixLog: {fileID: 4735465550816883431}
+--- !u!95 &4735465550816883431
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2493710488245056690}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 17f25bc829a2843bf997f70c740a3f53, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum Game3State
@@ -63,6 +64,12 @@ public class Game3Logic : MonoBehaviour
         rememberFollowerPerFinger = new TouchFollower[2];
         ForceHideAll();
         tutorial.StartSequence();
+    }
+
+     public void AfterWinSequence()
+    {
+        Debug.Log("After Win");
+        SceneManager.LoadScene("story4");
     }
 
     public void Update()

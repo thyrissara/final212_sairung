@@ -11,7 +11,11 @@ public class ColorPalette: MonoBehaviour
 
     public void Touched()
     {
+        if(paintLogic.paintState != PaintState.Brush){
+            return;
+        }
         paintLogic.SelectColor(this);
+        
     }
 
     public void Select()

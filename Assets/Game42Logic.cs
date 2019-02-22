@@ -1,11 +1,28 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Game42Logic : MonoBehaviour
 {
+
+
     public Log2[] logs;
     public Fix[] fixes;
+    public PopupSequence tutorialPopup;
+    public WinLoseSequence win;
+    private bool won;
 
+    public void Awake()
+    {
+        tutorialPopup.StartSequence();
+    }
+
+     public void AfterWinSequence()
+    {
+        Debug.Log("After Win");
+        SceneManager.LoadScene("story5");
+    }
     public void Update()
     {
         foreach (Log2 log in logs)
@@ -26,6 +43,11 @@ public class Game42Logic : MonoBehaviour
                     }
                 }
             }
+        }
+
+        if (fixes.All( x => x.alreadyFixed)&& won == false){
+            win.StartSequence(SequenceType.Win);
+            won = true;
         }
     }
 

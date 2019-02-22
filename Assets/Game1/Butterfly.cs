@@ -7,6 +7,7 @@ public class Butterfly : MonoBehaviour
     public AudioSource audioSource;
     public float movementPerFrame = 0.1f;
     public bool touched = false;
+    public Animation ButterflyClick;
 
     public void Update()
     {
@@ -22,6 +23,8 @@ public class Butterfly : MonoBehaviour
         if (!touched)
         {
             audioSource.Play();
+            ButterflyClick.Play();
+
             touched = true;
             PlayEffect();
             PlayerController pc = GameObject.Find("Player").GetComponent<PlayerController>();

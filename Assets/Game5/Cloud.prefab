@@ -620,7 +620,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   candyGot: 0
-  targetCandy: 1
+  targetCandy: 5
   distanceThreshold: 1.7
 --- !u!95 &7765629027973611341
 Animator:

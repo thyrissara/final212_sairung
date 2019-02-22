@@ -31,6 +31,12 @@ public class Game2Logic : MonoBehaviour
         SceneManager.LoadScene("Game2");
     }
 
+     public void AfterWinSequence()
+    {
+       
+        SceneManager.LoadScene("story3");
+    }
+
     public void StartGame()
     {
         StartRound();

@@ -101,7 +101,7 @@ public class Game1Logic : MonoBehaviour
     public void AfterWinSequence()
     {
         Debug.Log("After Win");
-        SceneManager.LoadScene("Game2");
+        SceneManager.LoadScene("story2");
     }
 
     public void AfterLoseSequence()
