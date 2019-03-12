@@ -123,11 +123,7 @@ public class Game2Logic : MonoBehaviour
         bananaCumulativeText.text = collectedBanana.ToString();
     }
 
-    public void DecreaseLife()
-    {
-        life -= 1;
-        UpdateLife();
-    }
+   
 
     public void UpdateLife()
     {
@@ -310,19 +306,24 @@ public class Game2Logic : MonoBehaviour
         disappearCount++;
         if (isRock == false)
         {
-            life--;
-            UpdateLife();
-            if (life == 0)
-            {
-                isWinningOrLosing = true;
-                winLoseSequence?.StartSequence(SequenceType.Lose);
-            }
+            RockLife();
         }
 
         if (life > 0)
         {
             CheckStartNewRound();
         }
+    }
+
+    public void RockLife()
+    {
+        life--;
+        UpdateLife();
+        if (life == 0)
+            {
+                isWinningOrLosing = true;
+                winLoseSequence?.StartSequence(SequenceType.Lose);
+            }
     }
 
     private void CheckStartNewRound()

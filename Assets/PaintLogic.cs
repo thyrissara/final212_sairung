@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum PaintState
@@ -102,5 +103,11 @@ public class PaintLogic : MonoBehaviour
             cp.Deselect();
         }
         selectedPalette.Select();
+    }
+
+     public void AfterWinSequence()
+    {
+        Debug.Log("After Win");
+        SceneManager.LoadScene("Home");
     }
 }

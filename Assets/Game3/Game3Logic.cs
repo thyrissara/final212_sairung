@@ -78,6 +78,7 @@ public class Game3Logic : MonoBehaviour
         {
             if(leftBranchFtc.floatValue > 1 && leftBranchSawed == false)
             {
+                
                 leftBranchSawAnimation.Play();
                 leftBranchSawed = true;
             }

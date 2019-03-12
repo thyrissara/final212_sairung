@@ -498,6 +498,12 @@ PrefabInstance:
       propertyPath: startGameAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7869827803724507659, guid: 137f2e043a8284a9f884efe5c2209d69,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 65040250dd7cb4341b5dec4df6759bda,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 137f2e043a8284a9f884efe5c2209d69, type: 3}
 --- !u!1001 &756066905
@@ -668,8 +674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: -12}
-  m_SizeDelta: {x: 206.2, y: 145.7}
+  m_AnchoredPosition: {x: 66.4, y: -5.2}
+  m_SizeDelta: {x: 207.8, y: 162.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944882808
 MonoBehaviour:
@@ -691,7 +697,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e9277413e3bc54ce6913e870a3fbee89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5cf8acb98d17f4e87abe42bb2dccdfe3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -843,16 +849,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
-        type: 3}
-      propertyPath: canvasRectangle
-      value: 
-      objectReference: {fileID: 1629351514}
-    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 62641800}
     - target: {fileID: 2419026273309913608, guid: 7aaaa8235737c47de8c95bade30d77f1,
         type: 3}
       propertyPath: allLogs.Array.size
@@ -898,6 +894,16 @@ PrefabInstance:
       propertyPath: logId
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
+        type: 3}
+      propertyPath: canvasRectangle
+      value: 
+      objectReference: {fileID: 1629351514}
+    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 62641800}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aaaa8235737c47de8c95bade30d77f1, type: 3}
 --- !u!224 &1308039645 stripped
@@ -918,6 +924,133 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1eb005ebb75841dda8644b36e899456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1343054551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1343054553}
+  - component: {fileID: 1343054552}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1343054552
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343054551}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 267ef01469bc94bc1a1f1c86e894923a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1343054553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343054551}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0300001, y: -1.32, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1360385720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1373,16 +1506,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
-        type: 3}
-      propertyPath: canvasRectangle
-      value: 
-      objectReference: {fileID: 1629351514}
-    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 62641800}
     - target: {fileID: 2419026273309913608, guid: 7aaaa8235737c47de8c95bade30d77f1,
         type: 3}
       propertyPath: allLogs.Array.size
@@ -1428,6 +1551,16 @@ PrefabInstance:
       propertyPath: logId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
+        type: 3}
+      propertyPath: canvasRectangle
+      value: 
+      objectReference: {fileID: 1629351514}
+    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 62641800}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aaaa8235737c47de8c95bade30d77f1, type: 3}
 --- !u!224 &1518741474 stripped
@@ -2318,16 +2451,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
-        type: 3}
-      propertyPath: canvasRectangle
-      value: 
-      objectReference: {fileID: 1629351514}
-    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 62641800}
     - target: {fileID: 2419026273309913608, guid: 7aaaa8235737c47de8c95bade30d77f1,
         type: 3}
       propertyPath: allLogs.Array.size
@@ -2373,6 +2496,16 @@ PrefabInstance:
       propertyPath: logId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
+        type: 3}
+      propertyPath: canvasRectangle
+      value: 
+      objectReference: {fileID: 1629351514}
+    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 62641800}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aaaa8235737c47de8c95bade30d77f1, type: 3}
 --- !u!224 &1949150071 stripped
@@ -2452,7 +2585,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d0877b8e826de463c96de1d736826e0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a783a43bdb93416caf24762f7d7f433, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2586,16 +2719,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
-        type: 3}
-      propertyPath: canvasRectangle
-      value: 
-      objectReference: {fileID: 1629351514}
-    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 62641800}
     - target: {fileID: 2419026273309913608, guid: 7aaaa8235737c47de8c95bade30d77f1,
         type: 3}
       propertyPath: allLogs.Array.size
@@ -2641,6 +2764,16 @@ PrefabInstance:
       propertyPath: logId
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
+        type: 3}
+      propertyPath: canvasRectangle
+      value: 
+      objectReference: {fileID: 1629351514}
+    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 62641800}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aaaa8235737c47de8c95bade30d77f1, type: 3}
 --- !u!224 &1986061147 stripped
@@ -3046,16 +3179,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
-        type: 3}
-      propertyPath: canvasRectangle
-      value: 
-      objectReference: {fileID: 1629351514}
-    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 62641800}
     - target: {fileID: 2419026273309913608, guid: 7aaaa8235737c47de8c95bade30d77f1,
         type: 3}
       propertyPath: allLogs.Array.size
@@ -3092,6 +3215,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1629351514}
     - target: {fileID: 2419026273309913608, guid: 7aaaa8235737c47de8c95bade30d77f1,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 62641800}
+    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
+        type: 3}
+      propertyPath: canvasRectangle
+      value: 
+      objectReference: {fileID: 1629351514}
+    - target: {fileID: 1041417073868481419, guid: 7aaaa8235737c47de8c95bade30d77f1,
         type: 3}
       propertyPath: mainCamera
       value: 

@@ -20,6 +20,10 @@ public class FallingDown : MonoBehaviour
     public RectTransform rectTransform;
     public GameObject countNumber;
     public Canvas mainCanvas;
+    public void DecreaseLife() {
+        var logic = GameObject.FindObjectOfType<Game2Logic>();
+        logic.RockLife();
+    }
 
     public void Update()
     {

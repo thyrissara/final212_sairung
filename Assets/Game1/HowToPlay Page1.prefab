@@ -12,6 +12,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: HowToPlay Page1
       objectReference: {fileID: 0}
+    - target: {fileID: 2985963897043792888, guid: e85565b90e1d943bba6f16f64d59a0bf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d57605310c75a486d9280b8ac0abf8a6,
+        type: 3}
     - target: {fileID: 2985963897043792891, guid: e85565b90e1d943bba6f16f64d59a0bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -117,11 +123,5 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2985963897043792888, guid: e85565b90e1d943bba6f16f64d59a0bf,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 662cbb54ea7e241c88f636838ed80c63,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85565b90e1d943bba6f16f64d59a0bf, type: 3}
