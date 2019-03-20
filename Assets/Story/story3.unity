@@ -409,7 +409,7 @@ PrefabInstance:
     - target: {fileID: 6207290486521684915, guid: 097b250a844d54c5997c3342806bfc7f,
         type: 3}
       propertyPath: goToSceneAfterTheEnd
-      value: story4
+      value: Game3
       objectReference: {fileID: 0}
     - target: {fileID: 6207290486521684915, guid: 097b250a844d54c5997c3342806bfc7f,
         type: 3}

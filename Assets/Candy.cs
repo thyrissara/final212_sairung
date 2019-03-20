@@ -53,6 +53,7 @@ public class Candy : MonoBehaviour
         if (numberText != null)
         {
             numberText.text = clouds.Sum(x => x.candyGot).ToString();
+           
         }
     }
 
