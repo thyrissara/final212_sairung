@@ -29,9 +29,21 @@ public class PaintLogic : MonoBehaviour
 
     public RenderTexture paintingTexture;
 
+    public StoryText[] st;
 
     public void Start()
     {
+
+        for(int i = 0; i < st.Length; i++)
+        {
+            if(st[i].who == "หมี")
+            {
+                //...
+                Debug.Log(st[i].text);
+            }
+        }
+
+
         if (UnityEngine.Random.value < 0.5f)
         {
             image1.SetActive(true);

@@ -65,7 +65,6 @@ public class Log2 : MonoBehaviour
 
         PointerEventData ped = (PointerEventData)baseEventData; 
         UpdateToPointerEventData(ped);
-        State = CandyState.Dragging;
 
         CurrentPointerEventData = ped;
     }
@@ -103,5 +102,7 @@ public class Log2 : MonoBehaviour
         bool succeed = RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectangle, pointerEventData.position, Camera.main, out Vector2 outLocalPoint);
         outLocalPoint = outLocalPoint + new Vector2(canvasRectangle.rect.width / 2f, canvasRectangle.rect.height / 2f);
         selfRectTransform.anchoredPosition = outLocalPoint;
+        
+        State = CandyState.Dragging;
     }
 }

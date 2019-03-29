@@ -10,12 +10,17 @@ public class Game4Logic : MonoBehaviour
     public int score;
 
     public PopupSequence tutorialPopup;
+   
+ 
     //public WinLoseSequence endingPopup;
 
-    public void Awake()
-    {
-        tutorialPopup.StartSequence();
-    }
+    // public void Awake()
+    // {
+    //     // tutorialPopup.StartSequence();
+        
+    // }
+
+   
 
     public void GetLog()
     {
@@ -25,5 +30,12 @@ public class Game4Logic : MonoBehaviour
         {
             SceneManager.LoadScene("story4_2");
         }
+    }
+    public void SkipToNewStory()
+    {
+        {
+            SceneManager.LoadScene("story4_2");
+        }
+
     }
 }

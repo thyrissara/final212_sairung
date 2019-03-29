@@ -1363,6 +1363,7 @@ MonoBehaviour:
   image1: {fileID: 448032529}
   image2: {fileID: 2017410456}
   paintingTexture: {fileID: 8400000, guid: 7f19aee6b9ddb488a8590525f1ee67ae, type: 2}
+  st: []
 --- !u!4 &392733002
 Transform:
   m_ObjectHideFlags: 0
