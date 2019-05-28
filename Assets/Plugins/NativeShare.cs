@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using System;
 #else
+using System;
 using UnityEngine;
 #endif
 
@@ -24,6 +25,11 @@ public static class NativeShare
     public static void Share(string body, string filePath = null, string url = null, string subject = "", string mimeType = "text/html", bool chooser = false, string chooserText = "Select sharing app")
     {
         ShareMultiple(body, new string[] { filePath }, url, subject, mimeType, chooser, chooserText);
+    }
+
+    public static void Share(string text, string screenShotPath, Uri uri, string v1, string v2, bool v3, string v4)
+    {
+        throw new NotImplementedException();
     }
 
     /// <summary>

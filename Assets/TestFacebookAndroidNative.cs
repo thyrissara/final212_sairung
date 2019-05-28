@@ -30,7 +30,8 @@ public class TestFacebookAndroidNative : MonoBehaviour
     	    yield return new WaitForSeconds(.05f);
         }
 
-		NativeShare.Share(text, screenShotPath, "", "sassaas", "image/png", true, "");
+		NativeShare.Share(text, screenShotPath, "" , "", "image/png", true, "");
+        
     }
 
     //---------- Helper Variables ----------//

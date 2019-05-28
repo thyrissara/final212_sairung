@@ -655,8 +655,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -255, y: 137}
-  m_SizeDelta: {x: 214.2, y: 214.16}
+  m_AnchoredPosition: {x: -233.2, y: 141}
+  m_SizeDelta: {x: 255.2, y: 227.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388032429
 MonoBehaviour:
@@ -849,12 +849,12 @@ PrefabInstance:
     - target: {fileID: 6634530804417937626, guid: 83f04e82dec4242868bb595ae0cb3459,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 70
+      value: 108.59
       objectReference: {fileID: 0}
     - target: {fileID: 6634530804417937626, guid: 83f04e82dec4242868bb595ae0cb3459,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 70
+      value: 108.59
       objectReference: {fileID: 0}
     - target: {fileID: 6634530804417937626, guid: 83f04e82dec4242868bb595ae0cb3459,
         type: 3}
@@ -969,7 +969,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 267ef01469bc94bc1a1f1c86e894923a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.368
+  m_Volume: 0.21
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1287,19 +1287,19 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3ab8395d677c149ff94e61f66a760ec2,
+      objectReference: {fileID: 21300000, guid: dbe27e64c6f32493fbaa2da521ffb1ae,
         type: 3}
     - target: {fileID: 6209981272624521466, guid: 7a731ace37dae49719a262d4edff4a69,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 20de958d8b79c440188a42191a1df244,
+      objectReference: {fileID: 21300000, guid: 8ec2dc1f60f4d4e5abfa7a886732b189,
         type: 3}
     - target: {fileID: 6678077885168845776, guid: 7a731ace37dae49719a262d4edff4a69,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: de0a5394c8b9f47bfba5c423bcff8f63,
+      objectReference: {fileID: 21300000, guid: d13f62bbdf4ff43329a19f0c08cb73d6,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a731ace37dae49719a262d4edff4a69, type: 3}
@@ -2108,7 +2108,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 47695c1bbbf364e7d85a8a11ef5faeb0,
+      objectReference: {fileID: 21300000, guid: ac59f1e9c1e40455a93690d4cf4c9d16,
+        type: 3}
+    - target: {fileID: 3050984222613805374, guid: 7344f45ed8dcc4e32b7d9a3b939e9d3b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d0a70bb29c2c74b4d8107f517d7a8dbd,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7344f45ed8dcc4e32b7d9a3b939e9d3b, type: 3}
@@ -2939,8 +2945,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 265, y: 137}
-  m_SizeDelta: {x: 214.2, y: 214.16}
+  m_AnchoredPosition: {x: 265, y: 146.14003}
+  m_SizeDelta: {x: 250.88, y: 250.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1557822289
 MonoBehaviour:
@@ -3279,7 +3285,23 @@ MonoBehaviour:
   collectedBanana: 0
   bubbleAnimator1: {fileID: 1562297164}
   bubbleAnimator2: {fileID: 837349849}
-  numberSounds: []
+  numberSounds:
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 22947e0dc9e6644d2b0a9b9ddedc57a4, type: 3}
+  - {fileID: 8300000, guid: 90743851b0cc8485da418cfedab8fc6a, type: 3}
+  - {fileID: 8300000, guid: 056930f1d4ed4431298a60ce4704bafa, type: 3}
+  - {fileID: 8300000, guid: 3bd2b0621efac4979935379b13ad9b2f, type: 3}
+  - {fileID: 8300000, guid: 33e5e9100c0d444c48e6bcc0c7be7254, type: 3}
+  - {fileID: 8300000, guid: 235b559642cf84f1eb0276dbad440c3f, type: 3}
+  - {fileID: 8300000, guid: 0a0c1803241b0434b87beaa40d9a5d0f, type: 3}
+  - {fileID: 8300000, guid: 5289866374ba144d88c701bfc4a1353b, type: 3}
+  - {fileID: 8300000, guid: b204ff1cb1fa5429baa6360c46bdb968, type: 3}
+  - {fileID: 8300000, guid: d4f99025e61b6443b9419de866adcf2d, type: 3}
+  - {fileID: 8300000, guid: 2a7bd0fd3db4348acbec9c9681c141b2, type: 3}
+  - {fileID: 8300000, guid: 0278336072b6e4d1eaf9a032750d4c0c, type: 3}
+  - {fileID: 8300000, guid: 39f5d02871da944deae9ec9dcd4dafcb, type: 3}
+  - {fileID: 8300000, guid: e5877b2379be1422c80d94e472fcdcca, type: 3}
+  - {fileID: 8300000, guid: 8dcc5723b1c9a4a468cc921ca3922641, type: 3}
   numberSoundSource: {fileID: 2079819597}
 --- !u!4 &1920646976
 Transform:

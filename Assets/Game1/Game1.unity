@@ -2425,6 +2425,18 @@ PrefabInstance:
       propertyPath: startGameAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3050984222613805374, guid: 137f2e043a8284a9f884efe5c2209d69,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d0a70bb29c2c74b4d8107f517d7a8dbd,
+        type: 3}
+    - target: {fileID: 7869827803724507659, guid: 137f2e043a8284a9f884efe5c2209d69,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 00841fdf79b0c40349d8315e73034bee,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 137f2e043a8284a9f884efe5c2209d69, type: 3}
 --- !u!224 &1692177844 stripped
@@ -2565,6 +2577,24 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1782510004918288364, guid: 9734b9bb282c246c5a6d33bedd8f1e64,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c4e42506ebdd1419b945e12e49192381,
+        type: 3}
+    - target: {fileID: 6209981272624521466, guid: 9734b9bb282c246c5a6d33bedd8f1e64,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 322c9b574fe3f4b638e8c34c13e8a029,
+        type: 3}
+    - target: {fileID: 6678077885168845776, guid: 9734b9bb282c246c5a6d33bedd8f1e64,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 710358270589b435f8d0fdbb7dd25d47,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9734b9bb282c246c5a6d33bedd8f1e64, type: 3}
 --- !u!224 &1714740638 stripped

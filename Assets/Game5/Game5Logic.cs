@@ -152,4 +152,11 @@ public class Game5Logic : MonoBehaviour
 
         return RectTransformUtility.RectangleContainsScreenPoint(rect, pointerEventData.position, Camera.main);
     }
+    public void SkipToNewStory()
+    {
+        {
+            SceneManager.LoadScene("story6");
+        }
+
+    }
 }
