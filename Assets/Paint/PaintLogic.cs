@@ -84,7 +84,7 @@ public class PaintLogic : MonoBehaviour
 
         string savePath = Application.persistentDataPath + $"/gallery/{randomName}.png";
         File.WriteAllBytes(savePath, pngBytes);
-        NativeShare.Share("hi", savePath,"", "", "image/png", true, "");
+        NativeShare.Share("hi", savePath,"", "subject", "image/png", true, "");
 
     
     }

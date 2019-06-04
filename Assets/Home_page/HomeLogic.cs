@@ -13,19 +13,28 @@ public class HomeLogic : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     public static void InitFacebook()
     {
-        FB.Init();
     }
 
     public UnityEvent loggingIn;
     public UnityEvent afterLoginSuccess;
     public UnityEvent afterLogout;
 
-    public void Start() 
+    public void Start()
     {
+        FB.Init(AfterInit);
+    }
+
+    void AfterInit()
+    {
+        //Debug.Log($"{AccessToken.CurrentAccessToken.ExpirationTime} {AccessToken.CurrentAccessToken.LastRefresh} {AccessToken.CurrentAccessToken.UserId}");
         if (FB.IsLoggedIn){
             afterLoginSuccess.Invoke();
         }
     }
+
+    // public void Start() 
+    // {
+    // }
 
     public void Login()
     {
@@ -45,6 +54,7 @@ public class HomeLogic : MonoBehaviour
             else if (!string.IsNullOrEmpty(result.RawResult))
             {
                 //success
+                //Debug.Log($"{result.AccessToken.ExpirationTime} {result.AccessToken.LastRefresh} {result.AccessToken.UserId}");
                 afterLoginSuccess.Invoke();
             }
             else
